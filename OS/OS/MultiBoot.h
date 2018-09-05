@@ -96,6 +96,20 @@ struct VbeInfoBlock
 	short TotalMemory;
 };
 
+//APM테이블 관련 정보들
+struct APMTable
+{
+	unsigned short Version;
+	unsigned short CS;
+	unsigned int Offset;
+	unsigned short CS16Bit;	//This is the 16-bit protected mode code segment
+	unsigned short DS;
+	unsigned short Flags;
+	unsigned short CSLength;
+	unsigned short CS16BitLength;
+	unsigned short DSLength;
+};
+
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
