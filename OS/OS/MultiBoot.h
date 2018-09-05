@@ -85,6 +85,17 @@ struct VbeModeInfo
 };
 
 
+//비디오의 정보를 기록함. 상태체크인듯
+struct VbeInfoBlock
+{
+	char Signature[4];
+	unsigned short Version;
+	short OEMString[2];
+	unsigned char Capabilities[4];
+	short VideoModes[2];
+	short TotalMemory;
+};
+
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
