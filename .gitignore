@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+*.log
+*.tlog
+*.db
+
+OS/.vs
