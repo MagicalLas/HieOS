@@ -150,6 +150,26 @@ struct ROMConfigurationTable
 	unsigned char Reserved5 : 6;
 };
 
+//드라이브 정보
+struct drive_info
+{
+	/* The size of this structure.  */
+	unsigned long size;
+
+	/* The BIOS drive number.  */
+	unsigned char drive_number;
+
+	/* The access mode (see below).  */
+	unsigned char drive_mode;
+
+	/* The BIOS geometry.  */
+	unsigned short drive_cylinders;
+	unsigned char drive_heads;
+	unsigned char drive_sectors;
+
+	/* The array of I/O ports used for the drive.  */
+	unsigned short drive_ports;
+};
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
