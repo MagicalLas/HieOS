@@ -4,6 +4,6 @@
 #include "string.h"
 #include "sprintf.h"
 #include "MultiBoot.h"
-#include "SkyConsole.h"
+#include "LasConsole.h"
 
 void kmain(unsigned long, unsigned long);
