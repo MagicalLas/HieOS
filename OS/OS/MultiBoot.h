@@ -1,5 +1,4 @@
-#pragma once
-#include "stdint.h"
+﻿#include "stdint.h"
 #include "windef.h"
 
 //여기서 DD를 저장한다.

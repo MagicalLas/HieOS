@@ -1,4 +1,4 @@
-#ifndef LASCONSOLE_H
+﻿#ifndef LASCONSOLE_H
 #define LASCONSOLE_H
 #include "windef.h"
 
