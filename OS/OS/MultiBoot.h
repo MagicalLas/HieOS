@@ -179,6 +179,17 @@ struct Module
 	char *Name;
 	unsigned int Reserved;
 };
+
+//Executable and Linkable Format의 테이블
+// 실행 파일, 목적 파일, 공유 라이브러리 그리고 코어 덤프를 위한 표준 파일 형식이다
+struct ELFHeaderTable
+{
+	uint32_t num;
+	uint32_t size;
+	uint32_t addr;
+	uint32_t shndx;
+};
+
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
