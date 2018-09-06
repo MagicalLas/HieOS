@@ -191,6 +191,15 @@ struct ELFHeaderTable
 	uint32_t shndx;
 };
 
+//http://www.freenos.org/doxygen/structAoutSymbolTable.html 에 정보가 있음
+//http://www.brokenthorn.com/Resources/OSDevMulti.html 관련 링크
+struct AOUTSymbolTable
+{
+	unsigned int tabsize;
+	unsigned int strsize;
+	unsigned int addr;
+	unsigned int reserved;
+};
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
