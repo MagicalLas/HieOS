@@ -97,6 +97,7 @@ struct VbeInfoBlock
 };
 
 //APM테이블 관련 정보들
+//Advanced Power Management (APM) table
 struct APMTable
 {
 	unsigned short Version;
