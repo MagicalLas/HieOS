@@ -31,7 +31,7 @@ _declspec(naked) void multiboot_entry(void)
 
 		//루프를 돈다. kmain이 리턴되지 않으면 아래 코드는 수행되지 않는다.
 		halt:
-		=jmp halt;
+		jmp halt;
 	}
 }
 
