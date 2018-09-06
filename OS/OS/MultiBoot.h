@@ -170,6 +170,15 @@ struct drive_info
 	/* The array of I/O ports used for the drive.  */
 	unsigned short drive_ports;
 };
+
+//모듈의 정보들, 주로 포인터
+struct Module
+{
+	void *ModuleStart;
+	void *ModuleEnd;
+	char *Name;
+	unsigned int Reserved;
+};
 //그럽이 주는 정보들을 담는 구조체. 위에 있는 것들의 끝판왕임
 struct multiboot_info
 {
