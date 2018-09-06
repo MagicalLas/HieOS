@@ -19,6 +19,17 @@
 #define MULTIBOOT_HEADER_MAGIC         0x1BADB002
 #define MULTIBOOT_BOOTLOADER_MAGIC      0x2BADB002
 
+
+
+#define   HEADER_ADRESS         KERNEL_LOAD_ADDRESS+ALIGN
+
+#define MULTIBOOT_HEADER_MAGIC         0x1BADB002
+#define MULTIBOOT_BOOTLOADER_MAGIC      0x2BADB002
+#define MULTIBOOT_HEADER_FLAGS         0x00010003 
+#define STACK_SIZE              0x4000    
+#define CHECKSUM            -(MULTIBOOT_HEADER_MAGIC + MULTIBOOT_HEADER_FLAGS)
+
+
 //여기서 부팅하는데 필요한 정보의 구조체를 만든다.
 #pragma pack(push,1)
 struct MULTIBOOT_HEADER {
