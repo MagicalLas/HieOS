@@ -56,7 +56,18 @@ struct AOUTSymbolTable
 	unsigned int reserved;
 };
 
+//비디오 모드 정보
+struct VbeInfoBlock
+{
+	char Signature[4];
+	unsigned short Version;
+	short OEMString[2];
+	unsigned char Capabilities[4];
+	short VideoModes[2];
+	short TotalMemory;
+};
 //비디오 모드 구조체
+//설정용
 struct VbeModeInfo
 {
 	UINT16 ModeAttributes;
