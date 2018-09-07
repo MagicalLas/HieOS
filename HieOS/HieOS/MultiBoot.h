@@ -47,3 +47,11 @@ struct ELFHeaderTable
 	uint32_t addr;
 	uint32_t shndx;
 };
+//The symbol table for a.out이라는 설명이 있어. (노답) 그러니까 그냥 넣어둔 녀석같아.
+struct AOUTSymbolTable
+{
+	unsigned int tabsize;
+	unsigned int strsize;
+	unsigned int addr;
+	unsigned int reserved;
+};
