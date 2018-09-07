@@ -39,4 +39,11 @@ struct MULTIBOOT_HEADER {
 	uint32_t bss_end_addr;
 	uint32_t entry_addr;
 };
-
+//실행 파일, 목적 파일, 공유 라이브러리 그리고 코어 덤프를 위한 표준 파일 형식이래.
+struct ELFHeaderTable
+{
+	uint32_t num;
+	uint32_t size;
+	uint32_t addr;
+	uint32_t shndx;
+};
