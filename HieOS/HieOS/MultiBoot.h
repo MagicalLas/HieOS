@@ -24,3 +24,19 @@
 #define MULTIBOOT_HEADER_FLAGS         0x00010003 
 #define STACK_SIZE              0x4000    
 #define CHECKSUM            -(MULTIBOOT_HEADER_MAGIC + MULTIBOOT_HEADER_FLAGS)
+
+//그럽용 헤더들. 여기에 쓰이는 데이터들은 엔트리 포인터에서 em로 넣어준다.
+//바로 위에 정의된 것들을 사용한다.
+//#pragma pack(push,1)는 이게 1바이트 단위로 저장이 된다는 것이다(구조체 크기 설정 참고)
+#pragma pack(push,1)
+struct MULTIBOOT_HEADER {
+	uint32_t magic;
+	uint32_t flags;
+	uint32_t checksum;
+	uint32_t header_addr;
+	uint32_t load_addr;
+	uint32_t load_end_addr;
+	uint32_t bss_end_addr;
+	uint32_t entry_addr;
+};
+
