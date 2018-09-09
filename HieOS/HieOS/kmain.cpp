@@ -14,7 +14,10 @@ _declspec(naked) void multiboot_entry(void)
 		em(00);
 		em(00);
 		em(HEADER_ADRESS + 0x20);
-	kernel_entry:
-		mov esp, _Kernel_Stack
+		kernel_entry:
+		mov esp, _Kernel_Stack;
+		push 0;
+		popf
+
 	}
 }
