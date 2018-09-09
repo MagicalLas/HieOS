@@ -18,6 +18,7 @@ _declspec(naked) void multiboot_entry(void)
 		mov esp, _Kernel_Stack;
 		push 0;
 		popf
-
+		push ebx;
+		push eax;
 	}
 }
