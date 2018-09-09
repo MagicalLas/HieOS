@@ -22,7 +22,7 @@ _declspec(naked) void multiboot_entry(void)
 		push eax;
 		call kmain;
 
-		h;
+		h:
 		jmp h;
 	}
 }
