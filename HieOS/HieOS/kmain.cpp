@@ -26,3 +26,8 @@ _declspec(naked) void multiboot_entry(void)
 		jmp h;
 	}
 }
+
+void kmain(unsigned long magic, unsigned long addr)
+{
+
+}
