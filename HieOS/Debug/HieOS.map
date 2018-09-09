@@ -1,0 +1,39 @@
+ HieOS
+
+ Timestamp is 5b94a31f (Sun Sep  9 13:35:43 2018)
+
+ Preferred load address is 00100000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000045H .text$mn                CODE
+ 0002:00000000 0000001cH .rdata                  DATA
+ 0002:0000001c 00000000H .edata                  DATA
+ 0002:0000001c 00000040H .rdata$zzzdbg           DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___hybrid_code_map         00000000     <absolute>
+ 0000:00000000       ___enclave_config          00000000     <absolute>
+ 0000:00000000       ___guard_flags             00000000     <absolute>
+ 0000:00000000       ___guard_iat_table         00000000     <absolute>
+ 0000:00000000       ___hybrid_auxiliary_iat    00000000     <absolute>
+ 0000:00000000       ___guard_fids_table        00000000     <absolute>
+ 0000:00000000       ___hybrid_code_map_count   00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_table     00000000     <absolute>
+ 0000:00000000       ___guard_fids_count        00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_count     00000000     <absolute>
+ 0000:00000000       ___guard_iat_count         00000000     <absolute>
+ 0000:00000000       ___dynamic_value_reloc_table 00000000     <absolute>
+ 0000:00000000       ___volatile_metadata       00000000     <absolute>
+ 0001:00000000       ?multiboot_entry@@YAXXZ    00100400 f   kmain.obj
+ 0001:00000040       ?kmain@@YAXKK@Z            00100440 f   kmain.obj
+
+ entry point at        0001:00000000
+
+ Static symbols
+
+
+ Exports
+
+  ordinal    name
+
