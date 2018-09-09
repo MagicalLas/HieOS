@@ -162,6 +162,46 @@ struct Module
 	unsigned int Reserved;
 };
 
+//롬 설정과 관련해서 만든 구조체
+struct ROMConfigurationTable
+{
+	unsigned short Length;
+	unsigned char Model;
+	unsigned char Submodel;
+	unsigned char BiosRevision;
+	bool DualBus : 1;
+	bool MicroChannelBus : 1;
+	bool EBDAExists : 1;
+	bool WaitForExternalEventSupported : 1;
+	bool Reserved0 : 1;
+	bool HasRTC : 1;
+	bool MultipleInterruptControllers : 1;
+	bool BiosUsesDMA3 : 1;
+	bool Reserved1 : 1;
+	bool DataStreamingSupported : 1;
+	bool NonStandardKeyboard : 1;
+	bool BiosControlCpu : 1;
+	bool BiosGetMemoryMap : 1;
+	bool BiosGetPosData : 1;
+	bool BiosKeyboard : 1;
+	bool DMA32Supported : 1;
+	bool ImlSCSISupported : 1;
+	bool ImlLoad : 1;
+	bool InformationPanelInstalled : 1;
+	bool SCSISupported : 1;
+	bool RomToRamSupported : 1;
+	bool Reserved2 : 3;
+	bool ExtendedPOST : 1;
+	bool MemorySplit16MB : 1;
+	unsigned char Reserved3 : 1;
+	unsigned char AdvancedBIOSPresence : 3;
+	bool EEPROMPresent : 1;
+	bool Reserved4 : 1;
+	bool FlashEPROMPresent : 1;
+	bool EnhancedMouseMode : 1;
+	unsigned char Reserved5 : 6;
+};
+
 struct multiboot_info
 {
 	/* Multiboot info version number */
