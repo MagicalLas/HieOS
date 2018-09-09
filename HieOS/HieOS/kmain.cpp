@@ -9,6 +9,8 @@ _declspec(naked) void multiboot_entry(void)
 		em(MULTIBOOT_HEADER_MAGIC);
 		em(MULTIBOOT_HEADER_FLAGS);
 		em(CHECKSUM);
+		em(HEADER_ADRESS);
+		em(KERNEL_LOAD_ADDRESS);
 		kernel_entry:
 	}
 }
