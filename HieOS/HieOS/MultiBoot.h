@@ -118,6 +118,20 @@ struct VbeModeInfo
 	char res2[194];
 };
 
+//어드벤스드 파워 메니지먼트 테이블이라는데 그냥 C++쪽 구현체에만 이런 단어가 있는듯,
+//무슨 용도인지 잘 모르겠음
+struct APMTable
+{
+	unsigned short Version;
+	unsigned short CS;
+	unsigned int Offset;
+	unsigned short CS16Bit;
+	unsigned short DS;
+	unsigned short Flags;
+	unsigned short CSLength;
+	unsigned short CS16BitLength;
+	unsigned short DSLength;
+};
 
 struct multiboot_info
 {
