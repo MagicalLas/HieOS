@@ -152,6 +152,15 @@ struct drive_info
 	unsigned short drive_ports;
 };
 
+//뭐하는 애인지 모르겠음
+//모듈에 관한 정보가 있다는 건 알겟음
+struct Module
+{
+	void *ModuleStart;
+	void *ModuleEnd;
+	char *Name;
+	unsigned int Reserved;
+};
 
 struct multiboot_info
 {
