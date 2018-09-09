@@ -172,6 +172,7 @@
     <ClCompile Include="kmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="kmain.h" />
     <ClInclude Include="MultiBoot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
