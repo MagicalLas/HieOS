@@ -20,5 +20,6 @@ _declspec(naked) void multiboot_entry(void)
 		popf
 		push ebx;
 		push eax;
+		call kmain;
 	}
 }
