@@ -11,6 +11,9 @@ _declspec(naked) void multiboot_entry(void)
 		em(CHECKSUM);
 		em(HEADER_ADRESS);
 		em(KERNEL_LOAD_ADDRESS);
+		em(00);
+		em(00);
+		em(HEADER_ADRESS + 0x20);
 		kernel_entry:
 	}
 }
