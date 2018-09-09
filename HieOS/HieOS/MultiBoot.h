@@ -133,6 +133,26 @@ struct APMTable
 	unsigned short DSLength;
 };
 
+struct drive_info
+{
+	//이 구조체 크기
+	unsigned long size;
+
+	unsigned char drive_number;
+
+	//접근모드
+	unsigned char drive_mode;
+
+	//뭔지 몰라.
+	unsigned short drive_cylinders;
+	unsigned char drive_heads;
+	unsigned char drive_sectors;
+
+	//IO포트
+	unsigned short drive_ports;
+};
+
+
 struct multiboot_info
 {
 	/* Multiboot info version number */
