@@ -22,4 +22,10 @@ enum ConsoleColor
 	White = 15
 };
 
+//그래픽 카드 주소 정의
+//여기에 값 넣으면 출력됨
+//흑백은 좀 다름
+#define VGA_COLOR_CRT_ADDRESS 0x3D4
+#define VGA_MONO_CRT_ADDRESS 0x3B4
+
 #endif
