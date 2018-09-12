@@ -28,4 +28,13 @@ enum ConsoleColor
 #define VGA_COLOR_CRT_ADDRESS 0x3D4
 #define VGA_MONO_CRT_ADDRESS 0x3B4
 
+//그래픽카드 관련 몇가지 설정들
+//숫자가 낮으니 더해서 사용 할 듯
+#define VGA_CRT_CURSOR_START 0x0A
+#define VGA_CRT_CURSOR_END 0x0B
+#define VGA_CRT_H_START_ADDRESS 0x0C
+#define VGA_CRT_H_END_ADDRESS 0x0D
+#define VGA_CRT_CURSOR_H_LOCATION 0x0E
+#define VGA_CRT_CURSOR_L_LOCATION 0x0F
+
 #endif
