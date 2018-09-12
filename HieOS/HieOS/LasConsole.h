@@ -1,5 +1,5 @@
-#ifndef LasConsole
-#define LasConsole
+#ifndef LasConsole_h
+#define LasConsole_h
 #include "windef.h"
 
 enum ConsoleColor
@@ -37,4 +37,6 @@ enum ConsoleColor
 #define VGA_CRT_CURSOR_H_LOCATION 0x0E
 #define VGA_CRT_CURSOR_L_LOCATION 0x0F
 
+namespace LasConsole{
+}
 #endif
