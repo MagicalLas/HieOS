@@ -40,4 +40,14 @@ void kmain(unsigned long magic, unsigned long addr)
 	else {
 		video_memory = VGA_COLOR_CRT_ADDRESS;
 	}
+
+	unsigned int m_ScreenHeight = 25;
+	unsigned int m_ScreenWidth = 80;
+
+	uint m_xPos = 0;
+	uint m_yPos = 0;
+
+	ConsoleColor m_Text = White;
+	ConsoleColor m_backGroundColor = Black;
+	ConsoleColor m_Color = (ConsoleColor)((m_backGroundColor << 4) | m_Text);
 }
