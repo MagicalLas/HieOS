@@ -37,6 +37,9 @@ enum ConsoleColor
 #define VGA_CRT_CURSOR_H_LOCATION 0x0E
 #define VGA_CRT_CURSOR_L_LOCATION 0x0F
 
-namespace LasConsole{
+namespace LasConsole {
+	void print(const char * str) {
+		ushort* video_memory;
+	}
 }
 #endif
