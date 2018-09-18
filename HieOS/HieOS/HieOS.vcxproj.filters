@@ -10,9 +10,6 @@
     <ClCompile Include="kmain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SkyConsole.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="LasConsole.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -27,7 +24,7 @@
     <ClInclude Include="LasConsole.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SkyConsole.h">
+    <ClInclude Include="LasGDT.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
