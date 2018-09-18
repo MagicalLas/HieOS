@@ -13,7 +13,20 @@ namespace LasConsole {
 	static unsigned short _VideoCardType;
 }
 void LasConsole::init() {
-	
+	//컬러인지 흑백인지 선택
+	char c = (*(unsigned short*)0x410 & 0x30);
+
+	if (c == 0x30)
+	{
+		_pVideoMemory = (unsigned short*)0xb0000;
+		_VideoCardType = VGA_MONO_CRT_ADDRESS;	// 흑백
+	}
+	else
+	{
+		_pVideoMemory = (unsigned short*)0xb8000;
+		_VideoCardType = VGA_COLOR_CRT_ADDRESS;	// 컬러
+	}
+
 	_xPos = 0;
 	_yPos = 0;
 
@@ -23,4 +36,5 @@ void LasConsole::init() {
 	_backGroundColor = ConsoleColor::White;
 	_Text = ConsoleColor::Black;
 	_Color = ConsoleColor::Cyan;
+
 }
