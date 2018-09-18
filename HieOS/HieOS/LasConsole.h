@@ -45,8 +45,9 @@ void OutPort(ushort port, uchar value)
 }
 
 namespace LasConsole {
-	void print(const char * str) {
-		ushort* video_memory;
-	}
+
+	void init();
+	void move_cursor(unsigned int  X, unsigned int  Y);
+	void print(char c);
 }
 #endif
