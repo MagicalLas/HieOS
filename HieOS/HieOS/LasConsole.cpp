@@ -36,5 +36,14 @@ void LasConsole::init() {
 	_backGroundColor = ConsoleColor::White;
 	_Text = ConsoleColor::Black;
 	_Color = ConsoleColor::Cyan;
+}
 
+void LasConsole::move_cursor(unsigned int x, unsigned int y) {
+
+	unsigned short Offset = (unsigned short)((y*_ScreenWidth) + (x - 1));
+
+	OutPort(_VideoCardType, VGA_CRT_CURSOR_H_LOCATION);
+	OutPort(_VideoCardType + 1, Offset >> 8);
+	OutPort(_VideoCardType, VGA_CRT_CURSOR_L_LOCATION);
+	OutPort(_VideoCardType + 1, (Offset << 8) >> 8);
 }
