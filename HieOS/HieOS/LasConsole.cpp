@@ -12,3 +12,15 @@ namespace LasConsole {
 	static unsigned int _ScreenWidth;
 	static unsigned short _VideoCardType;
 }
+void LasConsole::init() {
+	
+	_xPos = 0;
+	_yPos = 0;
+
+	_ScreenHeight = 30;
+	_ScreenWidth = 80;
+
+	_backGroundColor = ConsoleColor::White;
+	_Text = ConsoleColor::Black;
+	_Color = ConsoleColor::Cyan;
+}
