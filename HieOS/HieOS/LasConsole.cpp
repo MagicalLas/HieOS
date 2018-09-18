@@ -12,6 +12,13 @@ namespace LasConsole {
 	static unsigned int _ScreenWidth;
 	static unsigned short _VideoCardType;
 }
+//C에 있는 함수 사용
+extern "C" int _outp(unsigned short, int);
+
+void OutPort(ushort port, uchar value)
+{
+	_outp(port, value);
+}
 void LasConsole::init() {
 	//컬러인지 흑백인지 선택
 	char c = (*(unsigned short*)0x410 & 0x30);
@@ -35,7 +42,7 @@ void LasConsole::init() {
 
 	_backGroundColor = ConsoleColor::White;
 	_Text = ConsoleColor::Black;
-	_Color = ConsoleColor::Cyan;
+	_Color = (ConsoleColor)((_backGroundColor << 4) | _Text);
 }
 
 void LasConsole::move_cursor(unsigned int x, unsigned int y) {
@@ -46,4 +53,14 @@ void LasConsole::move_cursor(unsigned int x, unsigned int y) {
 	OutPort(_VideoCardType + 1, Offset >> 8);
 	OutPort(_VideoCardType, VGA_CRT_CURSOR_L_LOCATION);
 	OutPort(_VideoCardType + 1, (Offset << 8) >> 8);
+	_yPos = y;
+	_xPos = x;
+}
+void LasConsole::print(char c) {
+
+	ushort* VideoMemory = _pVideoMemory + _ScreenWidth * _yPos + _xPos;
+	uchar attribute = (uchar)((_backGroundColor << 4) | (_Text & 0xF));
+
+	*VideoMemory = (c | (ushort)(attribute << 8));
+
 }

@@ -170,11 +170,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="kmain.cpp" />
+    <ClCompile Include="LasConsole.cpp" />
+    <ClCompile Include="SkyConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kmain.h" />
     <ClInclude Include="LasConsole.h" />
     <ClInclude Include="MultiBoot.h" />
+    <ClInclude Include="SkyConsole.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

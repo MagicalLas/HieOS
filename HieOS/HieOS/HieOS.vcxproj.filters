@@ -10,6 +10,12 @@
     <ClCompile Include="kmain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="SkyConsole.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LasConsole.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MultiBoot.h">
@@ -19,6 +25,9 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="LasConsole.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyConsole.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
