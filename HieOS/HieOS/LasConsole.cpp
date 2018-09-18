@@ -40,9 +40,11 @@ void LasConsole::init() {
 	_ScreenHeight = 30;
 	_ScreenWidth = 80;
 
-	_backGroundColor = ConsoleColor::White;
-	_Text = ConsoleColor::Black;
+	_backGroundColor = ConsoleColor::LightRed;
+	_Text = ConsoleColor::White;
 	_Color = (ConsoleColor)((_backGroundColor << 4) | _Text);
+
+
 }
 
 void LasConsole::move_cursor(unsigned int x, unsigned int y) {
@@ -62,5 +64,14 @@ void LasConsole::print(char c) {
 	uchar attribute = (uchar)((_backGroundColor << 4) | (_Text & 0xF));
 
 	*VideoMemory = (c | (ushort)(attribute << 8));
+
+}
+void LasConsole::Clear()
+{
+
+	for (uint i = 0; i < _ScreenWidth * _ScreenHeight; i++)				//Remember, 25 rows and 80 columns
+	{
+		_pVideoMemory[i] = (ushort)(0x20 | (_Color << 8));
+	}
 
 }
