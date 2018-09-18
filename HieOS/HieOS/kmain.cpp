@@ -34,6 +34,7 @@ _declspec(naked) void multiboot_entry(void)
 void kmain(unsigned long magic, unsigned long addr)
 {
 	LasConsole::init();
+	LasConsole::Clear();
 	LasConsole::move_cursor(1, 2);
 	LasConsole::print('W');
 	LasConsole::move_cursor(2, 2);
@@ -52,6 +53,26 @@ void kmain(unsigned long magic, unsigned long addr)
 	LasConsole::print('A');
 	LasConsole::move_cursor(9, 2);
 	LasConsole::print('S');
+
+
+	LasConsole::move_cursor(1, 3);
+	LasConsole::print('H');
+	LasConsole::move_cursor(2, 3);
+	LasConsole::print('i');
+	LasConsole::move_cursor(3, 3);
+	LasConsole::print('e');
+	LasConsole::move_cursor(4, 3);
+	LasConsole::print('O');
+	LasConsole::move_cursor(5, 3);
+	LasConsole::print('S');
+	LasConsole::move_cursor(6, 4);
+	LasConsole::print('M');
+	LasConsole::move_cursor(7, 4);
+	LasConsole::print('A');
+	LasConsole::move_cursor(8, 4);
+	LasConsole::print('D');
+	LasConsole::move_cursor(9, 4);
+	LasConsole::print('E');
 	for (;;);
 
 }
