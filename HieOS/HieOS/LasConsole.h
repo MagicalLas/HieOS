@@ -1,7 +1,6 @@
 #ifndef LasConsole_h
 #define LasConsole_h
 #include "windef.h"
-
 enum ConsoleColor
 {
 	Black = 0,
@@ -36,6 +35,14 @@ enum ConsoleColor
 #define VGA_CRT_H_END_ADDRESS 0x0D
 #define VGA_CRT_CURSOR_H_LOCATION 0x0E
 #define VGA_CRT_CURSOR_L_LOCATION 0x0F
+
+//C에 있는 함수 사용
+extern "C" int _outp(unsigned short, int);
+
+void OutPort(ushort port, uchar value)
+{
+	_outp(port, value);
+}
 
 namespace LasConsole {
 	void print(const char * str) {
