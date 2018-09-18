@@ -43,5 +43,6 @@ namespace LasConsole {
 	void init();
 	void move_cursor(unsigned int  X, unsigned int  Y);
 	void print(char c);
+	void Clear();
 }
 #endif
