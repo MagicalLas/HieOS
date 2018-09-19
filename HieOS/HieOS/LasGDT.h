@@ -23,6 +23,4 @@ struct GDTR
 	uint8_t base;
 };
 
-//테이블 정의
-//10개의 GDT가 들어감
-static GDT_descripter _gdt[10];
+void gdt_set_descriptor(uint32_t i, uint64_t base, uint64_t limit, uint8_t access, uint8_t grand);
