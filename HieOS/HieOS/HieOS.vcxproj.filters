@@ -30,5 +30,8 @@
     <ClInclude Include="LasGDT.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="LasIDT.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
