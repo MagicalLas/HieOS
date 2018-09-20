@@ -35,6 +35,7 @@ void kmain(unsigned long magic, unsigned long addr)
 {
 	LasConsole::init();
 	LasConsole::Clear();
+	gdt_init();
 	for (;;);
 
 }
