@@ -5,6 +5,38 @@ static IDT_descripter	idt[256];
 IDT_descripter * get_interrupt_descripter(uint16_t index) {
 	return &idt[index];
 }
+
+__declspec(naked) void interrupt_default_handler() {
+	_asm {
+		PUSHAD
+		PUSHFD
+		CLI
+
+		; EOI 신호를 보낸다
+		; 여기서 시작
+		PUSH EBP
+		MOV EBP, ESP
+		PUSH EAX
+
+		MOV AL, 20H
+		OUT DMA_PICU1, AL
+
+		CMP BYTE PTR[EBP + 8], 7
+		JBE END_OF_EOI
+		OUT DMA_PICU2, AL; Send to 2 also
+
+		END_OF_EOI :
+		POP EAX
+			POP EBP
+			RET
+		; 여기서 끝
+
+		POPFD
+		POPAD
+		IRETD
+	}
+}
+
 bool install_interrupt_handler(uint16_t index, uint8_t flag, uint16_t selecter, I86_IRQ_HANDLER handler)
 {
 	if (!handler)
