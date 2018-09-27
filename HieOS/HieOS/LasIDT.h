@@ -22,3 +22,4 @@ struct IDT_descripter
 IDT_descripter * get_interrupt_descripter(uint16_t index);
 
 extern bool install_interrupt_handler(uint16_t index, uint16_t flag, uint16_t selecter, I86_IRQ_HANDLER);
+bool IDT_init(uint16_t code_selector);
