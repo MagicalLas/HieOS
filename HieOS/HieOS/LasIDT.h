@@ -2,6 +2,8 @@
 
 #include "stdint.h"
 
+typedef void(_cdecl *I86_IRQ_HANDLER)(void);
+
 struct IDTR
 {
 	uint16_t limit;
