@@ -18,3 +18,5 @@ struct IDT_descripter
 	uint8_t flag;
 	uint16_t offset_high;
 };
+
+IDT_descripter * get_interrupt_descripter(uint16_t index);
