@@ -172,6 +172,7 @@
     <ClCompile Include="kmain.cpp" />
     <ClCompile Include="LasConsole.cpp" />
     <ClCompile Include="LasGDT.cpp" />
+    <ClCompile Include="LasIDT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LasIDT.h" />

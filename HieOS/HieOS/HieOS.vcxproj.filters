@@ -16,6 +16,9 @@
     <ClCompile Include="LasGDT.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="LasIDT.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MultiBoot.h">
