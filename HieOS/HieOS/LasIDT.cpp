@@ -24,7 +24,7 @@ __declspec(naked) void interrupt_default_handler() {
 
 		CMP BYTE PTR[EBP + 8], 7
 		JBE END_OF_EOI
-		OUT DMA_PICU2, AL; Send to 2 also
+		OUT DMA_PICU2, AL
 
 		END_OF_EOI :
 		POP EAX
